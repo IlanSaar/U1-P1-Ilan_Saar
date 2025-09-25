@@ -1,4 +1,5 @@
 import java.sql.SQLOutput;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -8,6 +9,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         //Setting our variables and asking for values
+        DecimalFormat dc = new DecimalFormat(".00");
         System.out.print("Type in your subtotal: ");
         double subTotal = scan.nextDouble();
         System.out.println();
@@ -36,7 +38,7 @@ public class Main {
         System.out.println("Number of people: " + numPeople);
         System.out.println();
         System.out.println("Each person will tip: $" + tipPerPerson);
-        System.out.println("Each person pays: $" + totalPerPerson);
+        System.out.println("Each person pays: $" + dc.format(totalPerPerson));
         System.out.println();
         System.out.println("-----------------");
     }
