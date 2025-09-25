@@ -24,12 +24,20 @@ public class Main {
         double totalPerPerson = (finalTotal / numPeople);
 
         // Rounding to the nearest cent
-        tipPerPerson = Math.round((tipPerPerson + 0.005) * 100.0) / 100.0;
+        subTotal = Math.round(subTotal * 100.0) / 100.0;
+        tipPerPerson = Math.round((tipPerPerson + 0.005) * 100.0) / 100.0;;
         totalPerPerson = Math.round((totalPerPerson + 0.005) * 100.0) / 100.0;
 
         //Announcing the final values
+        System.out.println("-----------------");
+        System.out.println();
+        System.out.println("Bill: $" + (subTotal));
+        System.out.println("Tip %: " + (int)tipPercent + "%");
+        System.out.println("Number of people: " + numPeople);
+        System.out.println();
         System.out.println("Each person will tip: $" + tipPerPerson);
         System.out.println("Each person pays: $" + totalPerPerson);
-
+        System.out.println();
+        System.out.println("-----------------");
     }
 }
